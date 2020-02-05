@@ -1,0 +1,48 @@
+﻿<div class="col-md-6 offset-md-3 mt-5">
+    <div class="alert alert-info">
+        Username: test<br />
+        Password: test
+    </div>
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="../../assets/images/login-image.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title">Welcome Back!</h4>
+                    <p class="card-text">Please Login to access your Space Dashboard.</p>
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                    <div *ngIf="f.username.errors.required">Username is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">Password is required</div>
+                                </div>
+                            </div>                            
+                            <div class="row">
+                                <div class="col-md-8 d-flex justify-content-start">
+                                    <a class="nav-item nav-link pl-0" routerLink="/">Forget Password</a>		
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-end">
+                                    <button mat-raised-button [disabled]="loading" class="login-button nav-item nav-link" >
+                                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                        Login
+                                    </button>
+                            </div>
+                            </div>
+                            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

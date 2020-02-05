@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand navbar-white  bg-secondary">
+  <div class="navbar-nav pl-5 pt-2">
+    <nav class="" aria-label="breadcrumb">
+      <ul class="breadcrumb bg-transparent text-primary">
+        Home /
+        <li class="breadcrumb-item text-primary active" aria-current="page"> Dashboard</li>
+      </ul>
+      <h4>User List</h4>
+    </nav>
+  </div>
+  <div class="navbar-nav ml-auto pr-5">
+    <button mat-raised-button class="create-button" color="primary" (click)="openDialog()">
+      <ion-icon class="icon" name="add"> </ion-icon>
+      New User
+    </button>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-md-12">
+
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
+
+<div class="list-group users-list">
+  <div *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="row">
+      <div class="col col-md-2 image-col">
+        <img class="image" [src]="item.payload.doc.data().avatar">
+      </div>
+      <div class="col col-md-8 text-col">
+        <h5 class="mb-1">{{item.payload.doc.data().name}}</h5>
+        <small>Job Title: {{item.payload.doc.data().surname}}</small>
+      </div>
+      <div class="col col-md-2 actions-col">
+
+        <button class="btn btn-outline-primary action mr-2" (click)="viewDetails(item)" type="button">
+          <ion-icon class="icon" name="create"></ion-icon>
+        </button>
+
+
+
+        <button class="btn btn-outline-primary action" (click)="viewDetails(item)" type="button">
+          <ion-icon class="icon" name="arrow-dropright"></ion-icon>        
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

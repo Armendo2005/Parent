@@ -1,0 +1,21 @@
+<div class="page-container" >
+	<!-- nav -->
+	<nav class="navbar navbar-expand navbar-white bg-white">
+		<div class="navbar-nav pl-5">
+			<a class="navbar-brand" href="#">
+				<img alt="Brand" src="../assets/images/logo.jpg">
+			</a>
+		</div>
+		<div class="navbar-nav ml-auto pr-5">
+			<a class="nav-item nav-link" routerLink="/">HOME</a>
+			<a class="nav-item nav-link" routerLink="/">ABOUT</a>
+			<a class="nav-item nav-link" routerLink="/">CONTACT</a>		
+			<button mat-raised-button class="login-button nav-item nav-link" (click)="logout()">LOGIN</button>
+		</div>
+	</nav>
+
+	<div class="content-container" >
+		
+ 		<router-outlet></router-outlet>
+	</div>
+</div>

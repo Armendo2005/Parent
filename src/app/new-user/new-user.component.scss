@@ -1,0 +1,66 @@
+.create-page {
+
+  padding: 20px 60px;
+
+  .page-content {
+    background-color: #FFF;
+
+    .create-form{
+      margin-top: 100px;
+    }
+    .transform-middle{
+      position: absolute;
+      z-index: 999999999999;
+      transform: translate(110px, -150px);
+    }
+    button{
+      border-radius: 30px;
+    }
+    .img-avatar {
+      border-radius: 50%;
+      width: 150px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .change-img-button {
+      display: block;
+      margin: 0px auto;
+    }
+    .mat-dialog-container{
+      padding: 20px;
+    }
+    .create-form {
+      padding: 20px;
+
+
+
+      .submit-button-container {
+        justify-content: flex-end;
+
+        .submit-button{
+          width: 100%;
+
+        }
+        .mat-raised-button.mat-primary{
+          background-color: #8e44ad;
+          color: #fff;
+        }
+        .cancel-button{
+          width: 100%;
+          background-color: transparent;
+          color: #8e44ad;
+          border: 2px solid #8e44ad;
+        }
+      }
+
+      .input-style{
+        width: 100%;
+      }
+
+      .mat-error {
+        font-size: 12px;
+      }
+    }
+  }
+}

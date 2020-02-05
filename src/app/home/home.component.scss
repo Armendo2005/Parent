@@ -1,0 +1,69 @@
+nav{
+  margin-top: -25px;
+
+  .text-primary{
+    color:  #8e44ad !important;
+
+  }
+  
+}
+
+.filter-by-age {
+  color: #6c757d;
+
+  .title {
+    align-self: center;
+  }
+
+  .age-slider {
+    width: 85%;
+  }
+}
+.create-button{
+  background-color: #8e44ad;
+}
+
+.users-list {
+  padding: 40px 60px;
+
+  
+  
+  .btn-outline-primary{
+    
+    color: #8e44ad;
+    border-color: #8e44ad;
+
+    &:hover{
+      background-color: #8e44ad;
+      color: #fff;
+    }
+  }
+
+  .image-col {
+    text-align:center;
+
+    .image {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .text-col {
+    margin: auto 0px;
+  }
+  .actions-col {
+    text-align: center;
+    margin: auto 0px;
+
+    .action {
+      line-height: 1;
+    }
+    .icon {
+      font-size: 20px;
+    }
+
+    
+    
+  }
+}
+
